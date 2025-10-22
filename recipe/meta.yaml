@@ -1,4 +1,4 @@
-{% set version = "2.27.3" %}
+{% set version = "2.28.0" %}
 
 {% set PYTHON = PYTHON | default("$PYTHON") %}
 
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: eb36caca59e74471988f0ae25c77945610b887f777255aa21f8065def9e51ed4
+  sha256: 35baa81898b15f93573e2deca50d11ac0ae407ebb688299d3a5213265033712c
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
